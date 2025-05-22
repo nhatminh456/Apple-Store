@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Giới Thiệu Admin</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #f4f7f6;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: #333;
+      }
+
+      .admin-profile-card {
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 100%;
+        max-width: 450px;
+        text-align: center;
+        margin: 20px;
+      }
+
+      .profile-header {
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        padding: 40px 20px;
+        position: relative;
+      }
+
+      .profile-avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 5px solid #ffffff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        object-fit: cover; /* Đảm bảo ảnh không bị méo */
+      }
+
+      .profile-body {
+        padding: 30px;
+      }
+
+      .admin-name {
+        font-size: 1.8em;
+        font-weight: 700;
+        color: #333;
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+
+      .admin-title {
+        font-size: 1.1em;
+        color: #777;
+        margin-bottom: 15px;
+        font-style: italic;
+      }
+
+      .admin-bio {
+        font-size: 0.95em;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 20px;
+        text-align: justify; /* Căn đều cho đẹp hơn */
+      }
+
+      .contact-info {
+        margin-bottom: 20px;
+        font-size: 0.9em;
+      }
+
+      .contact-info p {
+        margin: 8px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Căn giữa icon và text */
+      }
+
+      .contact-info i {
+        margin-right: 10px;
+        color: #6e8efb;
+        font-size: 1.2em;
+      }
+
+      .contact-info a {
+        color: #555;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .contact-info a:hover {
+        color: #6e8efb;
+      }
+
+      .social-links {
+        margin-bottom: 20px;
+      }
+
+      .social-links a {
+        color: #555;
+        font-size: 1.5em;
+        margin: 0 12px;
+        text-decoration: none;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .social-links a:hover {
+        color: #6e8efb;
+        transform: translateY(-3px);
+      }
+
+      .profile-footer {
+        background-color: #f9f9f9;
+        padding: 15px;
+        font-size: 0.8em;
+        color: #888;
+        border-top: 1px solid #eee;
+      }
+
+      .profile-header {
+        padding: 30px 15px;
+      }
+
+      .profile-avatar {
+        width: 100px;
+        height: 100px;
+      }
+
+      .profile-body {
+        padding: 20px;
+      }
+
+      .admin-name {
+        font-size: 1.6em;
+      }
+
+      .admin-title {
+        font-size: 1em;
+      }
+
+      .social-links a {
+        font-size: 1.3em;
+        margin: 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="admin-profile-card">
+      <div class="profile-header"></div>
+      <div class="profile-body">
+        <h1 class="admin-name">Nhật Minh</h1>
+        <p class="admin-title">Quản trị viên hệ thống</p>
+        <p class="admin-bio">
+          Chào mừng bạn đến với trang quản trị! Tôi là Nhật Minh,chịu trách
+          nhiệm quản lý và duy trì hoạt động ổn định của hệ thống. Với kinh
+          nghiệm trong lĩnh vực bán hàng, tôi luôn cố gắng tối ưu hóa quy trình
+          và đảm bảo an toàn dữ liệu.
+        </p>
+        <div class="contact-info">
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:admin@example.com">minhtran29012005@gmail.com </a>
+          </p>
+          <p>
+            <i class="fas fa-phone"></i>
+            <a href="tel:+84123456789">0902578541 </a>
+          </p>
+        </div>
+        <div class="social-links">
+          <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="profile-footer">
+        <p>&copy; Quản lý cửa hàng bán điện thoại Apple</p>
+      </div>
+    </div>
+  </body>
+</html>

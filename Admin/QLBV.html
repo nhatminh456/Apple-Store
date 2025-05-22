@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Quản Trị</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      .sidebar {
+        background-color: #333;
+        color: white;
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding-top: 20px;
+      }
+
+      .sidebar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .sidebar ul li a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: white;
+      }
+
+      .sidebar ul li a:hover {
+        background-color: #555;
+      }
+
+      .content {
+        margin-left: 220px;
+        padding: 20px;
+      }
+
+      .dashboard-item {
+        background-color: white;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>Admin</h2>
+      <ul>
+        <li><a href="/Admin/Tongquan.html">Tổng quan</a></li>
+        <li><a href="#">Quản lý bài viết</a></li>
+        <li><a href="/Admin/QLnguoidung.html">Quản lý người dùng</a></li>
+        <li><a href="/QLSP/hangtrongkho.html">Quản lý sản phẩm</a></li>
+        <li><a href="/giohang/giohang.html">Đơn hàng</a></li>
+        <li><a href="#">Cài đặt</a></li>
+        <li><a href="/index.html">Đăng xuất</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h1>Chào mừng đến trang quản trị!</h1>
+
+      <div class="dashboard-item">
+        <h3>Bài viết gần đây</h3>
+        <ol>
+          <a
+            href="https://www.apple.com/vn/newsroom/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/"
+          >
+            <li>Bài viết 1</li>
+          </a>
+          <a
+            href="https://www.apple.com/vn/newsroom/2023/03/hello-yellow-apple-introduces-new-iphone-14-and-iphone-14-plus/"
+            ><li>Bài viết 2</li>
+          </a>
+          <a
+            href="https://www.apple.com/newsroom/2021/09/apple-introduces-iphone-13-and-iphone-13-mini/"
+            ><li>Bài viết 3</li>
+          </a>
+        </ol>
+        <p style="color: red">Tổng cộng 3 bài viết đã được đăng !</p>
+      </div>
+    </div>
+  </body>
+</html>

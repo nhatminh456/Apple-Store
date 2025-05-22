@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Củ sạc 70W USB-C Power Adapter</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      .container {
+        padding: 20px;
+      }
+      .phone-image {
+        width: 200px;
+        height: 350px;
+        margin-right: 20px;
+      }
+      .phone-options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .phone-option {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .phone-option-label {
+        margin-left: 10px;
+      }
+      .phone-option-image {
+        width: 50px;
+        height: 50px;
+      }
+      .price-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+      }
+      .price-info-left {
+        display: flex;
+        flex-direction: column;
+      }
+      .price-info-right {
+        display: flex;
+        flex-direction: column;
+      }
+      .price-info-discount {
+        font-size: 14px;
+        color: #888;
+      }
+      .price-info-middle {
+        padding: 0 10px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .promotion-info,
+      .student-privilege {
+        margin-top: 20px;
+        border: 1px solid #ddd;
+        padding: 10px;
+      }
+      .promotion-info-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .promotion-info-content {
+        margin-bottom: 5px;
+      }
+      .container-menu {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .btn-primary {
+        background-color: #333;
+        border-color: #333;
+      }
+
+      .btn-primary:hover,
+      .btn-primary:focus,
+      .btn-primary:active,
+      .btn-primary.active {
+        background-color: #333;
+        border-color: #333;
+      }
+
+      header {
+        background: white;
+        color: black;
+        padding: 10px 0;
+      }
+
+      header .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      header .logo h1 {
+        margin-left: 20px;
+      }
+
+      header nav {
+        display: flex;
+        align-items: center;
+      }
+
+      header nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      header nav ul li {
+        position: relative;
+      }
+
+      header nav ul li a {
+        color: black;
+        text-decoration: none;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      header nav ul li a:hover,
+      header nav ul li a:focus {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      header nav ul li a:active {
+        background-color: transparent;
+      }
+
+      header .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: white;
+        border: none;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        min-width: 150px;
+        z-index: 1000;
+      }
+
+      header .dropdown-menu li a {
+        color: black;
+        padding: 10px;
+        display: block;
+        text-align: left;
+      }
+
+      header .dropdown-menu li a:hover {
+        background-color: #444444c6;
+      }
+
+      header .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      header .search-cart {
+        display: flex;
+        align-items: center;
+      }
+
+      header .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      header .dropdown-toggle {
+        color: black;
+        text-decoration: none;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      header .dropdown:hover .dropdown-toggle {
+        background-color: transparent;
+      }
+
+      header .account {
+        position: relative;
+      }
+
+      header .account a {
+        color: black;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 10px;
+      }
+      .logo-APPLE {
+        height: 100px;
+        width: 150px;
+      }
+
+      header .account .dropdown-menu {
+        background-color: white;
+        border: none;
+        box-shadow: none;
+        margin-top: 10px;
+        min-width: 150px;
+      }
+
+      header .account .dropdown-menu li a {
+        color: black;
+        padding: 10px;
+        display: block;
+        text-align: left;
+      }
+
+      header .account .dropdown-menu li a:hover {
+        background-color: #444;
+      }
+
+      header .account .glyphicon {
+        margin-right: 5px;
+      }
+
+      header .search-cart input {
+        padding: 5px;
+        margin-right: 10px;
+        color: #000;
+      }
+
+      header .search-cart .cart {
+        padding: 5px 10px;
+        background: #f4f4f4;
+        color: #333;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container-menu">
+        <div class="logo">
+          <img
+            class="logo-APPLE"
+            src="/image/logo-apple.png"
+            alt="logo apple"
+          />
+          <h1>TáoPhone</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/index.html">Trang Chủ</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                >Sản Phẩm <span class="caret"></span
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/index.html#15series-products">iPhone 15 Series</a>
+                </li>
+                <li>
+                  <a href="/index.html#14series-products">iPhone 14 Series</a>
+                </li>
+                <li>
+                  <a href="/index.html#13series-products">iPhone 13 Series</a>
+                </li>
+                <li><a href="/index.html#ipad-products">iPad</a></li>
+                <li><a href="/index.html#airpods-products">AirPods</a></li>
+                <li>
+                  <a href="/index.html#phukienapple-products">Phụ kiện Apple</a>
+                </li>
+                <li>
+                  <a href="/index.html#phukienbent3-products"
+                    >Phụ kiện bên thứ 3</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li><a href="/index.html#flash-sale">Khuyến Mãi</a></li>
+            <li><a href="/index.html#about">Giới Thiệu</a></li>
+          </ul>
+        </nav>
+        <div class="search-cart">
+          <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+          <div class="cart">Giỏ Hàng (0)</div>
+          <div class="account dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle account-toggle"
+              data-toggle="dropdown"
+            >
+              <span class="glyphicon glyphicon-user"></span> Tài Khoản
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/index.html#login-btn" id="login-btn">Đăng Nhập</a>
+              </li>
+              <li>
+                <a href="/index.html#register-modal" id="register-link"
+                  >Đăng Ký</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <ul class="breadcrumb">
+      <li><a href="/index.html">Trang chủ</a></li>
+      <li><a href="/index.html#products">Sản phẩm</a></li>
+      <li><a href="/index.html#phukienapple-products">Phụ kiện Apple</a></li>
+      <li class="active">Củ sạc 70W USB-C Power Adapter</li>
+    </ul>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="phone-image">
+            <img
+              src="/image/cusac70wapple.webp"
+              alt="Củ sạc 70W USB-C Power Adapter"
+              width="250%"
+              height="auto"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h1>Củ sạc 70W USB-C Power Adapter</h1>
+          <p>No.00777777</p>
+          <div class="price-info">
+            <div class="price-info-left">
+              <span class="price-info-price">1.490.000 ₫</span>
+              <span class="price-info-discount">1.590.000 ₫ Giảm 10%</span>
+            </div>
+            <div class="price-info-middle"></div>
+          </div>
+          <div class="promotion-info">
+            <div class="promotion-info-title">Khuyến mãi nổi bật</div>
+            <div class="promotion-info-content">
+              <div class="checkbox">
+                <label
+                  ><input type="checkbox" checked />Giảm ngay 5,500,000₫ áp dụng
+                  đến 12/08</label
+                >
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" checked />Trả góp 0%</label>
+              </div>
+            </div>
+          </div>
+          <div class="student-privilege">
+            <div class="promotion-info-title">Đặc quyền sinh viên</div>
+            <div class="promotion-info-content">
+              <span class="price-info-price">300.000 ₫</span>
+              <button type="button" class="btn btn-primary">
+                Xác thực ngay
+              </button>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-lg">Mua ngay</button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="panel panel-default">
+        <div class="panel-heading">Thông tin hàng hóa</div>
+        <div class="panel-body">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>Model</td>
+                <td>USB-C to Magsafe 3</td>
+              </tr>
+              <tr>
+                <td>Xuất xứ</td>
+                <td>Trung Quốc</td>
+              </tr>
+              <tr>
+                <td>Thời gian bảo hành (tháng)</td>
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>Hướng dẫn sử dụng</td>
+                <td>Xem trong sách hướng dẫn sử dụng</td>
+              </tr>
+              <tr>
+                <td>Màu sắc</td>
+                <td>Trắng</td>
+              </tr>
+              <tr>
+                <td>Trọng lượng sản phẩm</td>
+                <td>240</td>
+              </tr>
+              <tr>
+                <td>Chất liệu</td>
+                <td>Silicone</td>
+              </tr>
+              <tr>
+                <td>Loại Sạc - Cáp</td>
+                <td>Adapter sạc</td>
+              </tr>
+              <tr>
+                <td>Sử dụng cho thiết bị</td>
+                <td>MacBook</td>
+              </tr>
+
+              <tr>
+                <td>Cổng cáp kết nối</td>
+
+                <td>Magsafe Charger</td>
+              </tr>
+              <tr>
+                <td>Tính năng</td>
+                <td>
+                  Cổng sạc USB-C<br />
+
+                  Truyền dữ liệu
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("#storage-options .btn").on("click", function () {
+          $("#storage-options .btn")
+            .removeClass("btn-primary")
+            .addClass("btn-default");
+          $(this).removeClass("btn-default").addClass("btn-primary");
+        });
+
+        $("#color-options .btn").on("click", function () {
+          $("#color-options .btn")
+            .removeClass("btn-primary")
+            .addClass("btn-default");
+          $(this).removeClass("btn-default").addClass("btn-primary");
+        });
+      });
+    </script>
+  </body>
+</html>

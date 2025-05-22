@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Táo Phone Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Thanh Điều Hướng -->
+    <header>
+        <div class="container">
+            <div class="logo">
+
+            <img class="logo-APPLE" src="/image/logo-apple.png" alt="logo apple">
+                <h1>TáoPhone </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Trang Chủ</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#products">Sản Phẩm
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#15series-products">iPhone 15 Series</a></li>
+                          <li><a href="#14series-products">iPhone 14 Series</a></li>
+                          <li><a href="#13series-products">iPhone 13 Series</a></li>
+                          <li><a href="#ipad-products">iPad</a></li>
+                          <li><a href="#airpods-products">AirPods</a></li>
+                          <li><a href="#phukienapple-products">Phụ kiện Apple</a></li>
+                          <li><a href="#phukienbent3-products">Phụ kiện bên thứ 3</a></li>
+                        </ul>
+                    <li><a href="#flash-sale">Khuyến Mãi</a></li>
+                    <li><a href="#about">Giới Thiệu</a></li>
+                </ul>
+            </nav>
+            <div class="search-cart">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+               <a href="/giohang/giohang.html"> <div class="cart">Giỏ Hàng (0)</div> </a>
+                <div class="account dropdown">
+                    <a href="#" class="dropdown-toggle account-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span> Tài Khoản <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" id="login-btn">Đăng Nhập</a></li>
+                        <li><a href="#" id="register-link">Đăng Ký</a></li>
+                    </ul>
+                
+               </div>
+              <a href="/Admin/admin.html" >
+                <span class="glyphicon glyphicon-user"></span> Tài Khoản Admin </a>
+              
+            </div>
+
+        </div>
+    </header> 
+    <!-- Trang Chính -->
+    <main>
+        <section class="slider">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <a href="/iphone15/chitietsp15.html"><img src="/image/bannerslide1.png" alt="Product 2"></a>
+                    <a href="/chitietsp15pm.html"><h3>Thiết kế mới khung viền Tianium</h3></a>
+                </div>
+                <div class="slide">
+                    <a href="/chitietsp15pm.html"><img src="/image/bannerslide2.png" alt="Product 2"></a>
+                    <a href="/chitietsp15pm.html"><h3>Chỉ có tại Táo Phone, Mua ngay?</h3></a>
+                </div>
+                <div class="slide">
+                    <a href="/chitietsp15pro.html"><img src="/image/bannerslide3.png" alt="Product 3"></a>
+                    <a href="/chitietsp15pro.html"><h3>Thiết kế nhỏ gọn hơn Pro Max, Mua ngay?</h3></a>
+                </div>
+                <div class="slide">
+                    <a href="/chitietsp14pm.html"><img src="/image/bannerslide4.png" alt="Product 4"></a>
+                    <a href="/chitietsp14pm.html"><h3>iPhone 14 Pro Max, Mua ngay?</h3></a>
+                </div>
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div> 
+        <section id="flash-sale" class="products flash-sale-container">
+            <h2>Flash Sale</h2>
+            <div class="product-list">
+                <!-- Thêm sản phẩm với hiệu ứng sale -->
+                <div class="product-card sale">
+                    <img src="/image/iphone15procolor.png" alt="iPhone 15 Pro Max">
+                    <div class="discount-tag">-16%</div>
+                    <a href="/iphone15/chitietsp15pm.html"><h3>iPhone 15 Pro Max</h3></a>  
+                    <p class="price-old">Giá: 34.990.000 VNĐ</p>
+                    <p class="price-new">Còn: 29.490.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                    </div>
+                <div class="product-card sale">
+                    <img src="/image/iphone15procolor.png" alt="iPhone 15 Pro">
+                    <div class="discount-tag">-14%</div>
+                    <a href="/iphone15/chitietsp15pro.html"><h3>iPhone 15 Pro</h3></a>
+                    <p class="price-old">Giá: 28.990.000 VNĐ</p>
+                    <p class="price-new">Còn: 24.990.900 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card sale">
+                    <img src="/image/iphone14pmcolor.jpg" alt="iPhone 14 Pro Max">
+                    <div class="discount-tag">-17%</div>
+                    <a href="/iphone14/chitietsp14pm.html"><h3>iPhone 14 Pro Max</h3></a> 
+                    <p class="price-old">Giá: 30.000.000 VNĐ</p>
+                    <p class="price-new">Còn: 24.000.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+            </div>
+        </section>
+        <section class="products" id="15series-products">
+            <h2>iPhone 15 Series</h2>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="/image/iphone15pmTunhien.jpg" alt="iPhone 15 Pro Max">
+                    <a href="/iphone15/chitietsp15pm.html"><h3>iPhone 15 Pro Max</h3></a>
+                    <p class="price-old">Giá: 34.990.000 VNĐ</p>
+                    <p class="price-new">Còn: 29.490.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/iphone15procolor.png" alt="iPhone 15 Pro">
+                    <a href="/iphone15/chitietsp15pro.html"><h3>iPhone 15 Pro </h3></a>
+                    <p class="price-old">Giá: 28.990.000 VNĐ</p>
+                    <p class="price-new">Còn: 24.990.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/iphone15pluscolor.jpg" alt="iPhone 15 Plus">
+                    <a href="/iphone15/chitietsp15plus.html"><h3>iPhone 15 Plus</h3></a>
+                    <p class="price-old">Giá: 25.990.000 VNĐ</p>
+                    <p class="price-new">Còn: 22.990.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/iphone15color.jpg" alt="iPhone 15">
+                    <a href="/iphone15/chitietsp15.html"><h3>iPhone 15</h3></a>
+                    <p class="price-old">Giá: 22.990.000 VNĐ</p>
+                    <p class="price-new">Còn: 19.990.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+            </div>
+        </section>
+        <section class="products" id="14series-products">
+            <h2>iPhone 14 Series</h2>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="image/iphone14pmcolor.jpg" alt="iPhone 14 Pro Max">
+                    <a href="/iphone14/chitietsp14pm.html"><h3>iPhone 14 Pro Max</h3></a>
+                    <p class="price-old">Giá: 29.490.000 VNĐ</p>
+                    <p class="price-new">Còn: 26.990.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/iphone14procolor.jpg" alt="iPhone 14 Pro">
+                    <a href="/iphone14/chitietsp14pro.html"><h3>iPhone 14 Pro</h3></a>
+                    <p class="price-old">Giá: 27.990.000 VNĐ</p>
+                    <p class="price-new">Còn: 22.490.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/iphone14plus.png" alt="iPhone 14 Plus">
+                    <a href="/iphone14/chitietsp14plus.html"><h3>iPhone 14 Plus</h3></a>
+                    <p class="price-old">Giá: 25.990.000 VNĐ</p>
+                    <p class="price-new">Còn: 21.490.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/iphone14.png" alt="iPhone 14">
+                    <a href="/iphone14/chitietsp14.html"><h3>iPhone 14</h3></a>
+                    <p class="price-old">Giá: 22.990.000 VNĐ</p>
+                    <p class="price-new">Còn: 18.490.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+            </div>
+        </section>
+        <section class="products" id="13series-products">
+            <h2>iPhone 13 Series (Like new)</h2>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="image/iphone13promaxcolor.jpg" alt="iPhone 13">
+                    <a href="/iphone13/chitietsp13pm.html"><h3>iPhone 13 Pro Max</h3></a>
+                    <p class="price-old">Giá: 27.990.000 VNĐ</p>
+                    <p class="price-new">Còn: 18.490.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/iphone13procolor.jpg" alt="iPhone 13 Pro">
+                    <a href="/iphone13/chitietsp13pro.html"><h3>iPhone 13 Pro</h3></a>
+                    <p class="price-old">Giá: 25.990.000 VNĐ</p>
+                    <p class="price-new">Còn: 16.490.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/iphone13minicolor.jpg" alt="iPhone 13 Mini">
+                    <a href="/iphone13/chitiet13mini.html"><h3>iPhone 13 Mini</h3></a>
+                    <p class="price-old">Giá: 22.990.000 VNĐ</p>
+                    <p class="price-new">NGỪNG KINH DOANH</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/iphone13color.jpg" alt="iPhone 13">
+                    <a href="/iphone13/chitiet13mini.html"><h3>iPhone 13</h3></a>
+                    <p class="price-old">Giá: 20.990.000 VNĐ</p>
+                    <p class="price-new">Còn: 13.490.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+            <div>
+        </section>
+        <section class="products" id="ipad-products">
+            <h2>iPad</h2>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="image/ipadpro.jpg" alt="iPad Pro 11 inch M4 2024 Wifi 256GB">
+                    <a href="/ipad/ipadpro11.html"><h3>iPad Pro 11 inch M4 2024 Wifi 256GB</h3></a>
+                    <p class="price-old">Giá: 28.990.000 VNĐ</p>
+                    <p class="price-new">Còn: 27.490.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/ipadprom3.webp" alt="iPad Pro 13 inch M4 2024 Wifi 256GB">
+                    <a href="/ipad/ipadpro13.html"><h3>iPad Pro 13 inch M4 2024 Wifi 256GB</h3></a>
+                    <p class="price-old">Giá: 37.990.000 VNĐ</p>
+                    <p class="price-new">Còn: 36.790.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/ipadprom2B.jpg" alt="iPad Pro 12.9 2022 M2 WiFi 5G 128GB">
+                    <a href="/ipad/ipadproM2.html"><h3>iPad Pro 12.9 2022 M2 WiFi 5G 128GB</h3></a>
+                    <p class="price-old">Giá: 39.990.000 VNĐ</p>
+                    <p class="price-new">Còn: 35.490.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/ipadmini6.webp" alt="iPad mini 6 2021 8.3 inch WiFi 64GB">
+                    <a href="/ipad/ipadmini6.html"><h3>iPad mini 6 2021 8.3 inch WiFi 64GB</h3></a>
+                    <p class="price-old">Giá: 13.990.000 VNĐ</p>
+                    <p class="price-new">Còn: 12.790.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+            <div>
+        </section>
+        <section class="products" id="airpods-products">
+            <h2>AirPods</h2>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="image/tai4.webp" alt="Tai nghe AirPods 3 2021 Hộp sạc không dây">
+                    <a href="/airpods/airpods3_2021.html "><h3>Tai nghe AirPods 3 2021 Hộp sạc không dây</h3></a>
+                    <p class="price-old">Giá: 6.990.000 VNĐ</p>
+                    <p class="price-new">Còn: 4.690.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/tai3.jpg" alt="Tai nghe AirPods 2 hộp sạc dây">
+                    <a href="/airpods/airpods2.html"><h3>Tai nghe AirPods 2 hộp sạc dây</h3></a>
+                    <p class="price-old">Giá: 3.390.000 VNĐ</p>
+                    <p class="price-new">Còn: 2.790.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/tai1.jpg" alt="Tai nghe AirPods Pro 2022">
+                    <a href="/airpods/airpods2022.html"><h3>Tai nghe AirPods Pro 2022</h3></a>
+                    <p class="price-old">Giá: 6.190.000 VNĐ</p>
+                    <p class="price-new">Còn: 5.390.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/tai2.jpg" alt="Tai nghe AirPods Pro 2023 USB-C">
+                    <a href="/airpods/airpods2023.html"><h3>Tai nghe AirPods Pro 2023 USB-C</h3></a>
+                    <p class="price-old">Giá: 6.190.000 VNĐ</p>
+                    <p class="price-new">Còn: 5.790.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+            <div>
+        </section>
+        <section class="products" id="phukienapple-products">
+            <h2>Phụ kiện Apple</h2>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="image/cusac70wapple.webp" alt="Củ sạc 70w">
+                    <a href="/Daysact3/sac70w.html"><h3>Củ sạc 70w</h3></a>
+                    <p class="price-old">Giá: 1.590.000 VNĐ</p>
+                    <p class="price-new">Còn: 1.490.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/cusac20wapple.jpg" alt="Củ sạc 20w">
+                    <a href="/Daysact3/sac20w.html"><h3>Củ sạc 20w</h3></a>
+                    <p class="price-old">Giá: 890.000 VNĐ</p>
+                    <p class="price-new">Còn: 490.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/daytypeC-Lightning.webp" alt="Cáp Type C - Lightning Apple MM0A3FE/A 1m">
+                    <a href="/dayapple/daysac1apple.html"><h3>Cáp Type C - Lightning Apple MM0A3FE/A 1m</h3></a>
+                    <p class="price-old">Giá: 590.000 VNĐ</p>
+                    <p class="price-new">Còn: 540.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/dayusbC-typeC.webp" alt="Cáp Apple USB-C to Type-C dây dù 240W 2M MU2G3ZA/A">
+                    <a href="/dayapple/daysac2apple.html"><h3>Cáp Apple USB-C to Type-C dây dù 240W 2M MU2G3ZA/A</h3></a>
+                    <p class="price-old">Giá: 810.000 VNĐ</p>
+                    <p class="price-new">Còn: 720.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+            <div>
+        </section>
+        <section class="products" id="phukienbent3-products">
+            <h2>Phụ kiện bên thứ 3</h2>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="image/sac1.3.jpg" alt="Củ sạc nhanh 1 cổng Robot Ugreen GaN 30W USB-C">
+                    <a href="/Daysact3/sac1.html"><h3>CSN 1 cổng Robot Ugreen GaN 30W USB-C</h3></a>
+                    <p class="price-old">Giá: 700.000 VNĐ</p>
+                    <p class="price-new">Còn: 595.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/sac.jpg" alt="Củ sạc nhanh 1 cổng Anker 511 Nano 3 Gan 30W USB-C">
+                    <a href="/Daysact3/sac2.html"><h3>CSN 1 cổng Anker 511 Nano 3 Gan 30W USB-C</h3></a>
+                    <p class="price-old">Giá: 600.000 VNĐ</p>
+                    <p class="price-new">Còn: 420.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/sacden.jpg" alt="Củ sạc nhanh 3 cổng Robot Ugreen GaN 65W USB-C">
+                    <a href="/Daysact3/sac3.html"><h3>CSN 3 cổng Robot Ugreen GaN 65W USB-C</h3></a>
+                    <p class="price-old">Giá: 900.000 VNĐ</p>
+                    <p class="price-new">Còn: 520.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/sac2.jpg" alt="Củ sạc nhanh 1 cổng Innostyle Minigo GAN II 30W USB-C">
+                    <a href="/Daysact3/sac4.html"><h3>CSN 1 cổng Innostyle Minigo GAN II 30W USB-C</h3></a>
+                    <p class="price-old">Giá: 800.000 VNĐ</p>
+                    <p class="price-new">Còn: 520.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/daysac1.jpg" alt="Cáp sạc Type C to Lightning Bagi dây dù 1.2m">
+                    <a href="/Daysact3/day1.html"><h3>Cáp sạc Type C to Lightning Bagi dây dù 1.2m</h3></a>
+                    <p class="price-old">Giá: 350.000 VNĐ</p>
+                    <p class="price-new">Còn: 200.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/daysac2.webp" alt="Cáp Baseus Crystal Shine USB-C to Lightning 1.2M">
+                    <a href="/Daysact3/day2.html"><h3>Cáp Baseus Crystal Shine USB-C to Lightning 1.2M</h3></a>
+                    <p class="price-old">Giá: 290.000 VNĐ</p>
+                    <p class="price-new">Còn: 195.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/daysac3.webp" alt="Cáp Golf USB-A to Micro sạc nhanh 3A GC-64M 1 mét">
+                    <a href="/Daysact3/day3.html"><h3>Cáp Golf USB-A to Micro sạc nhanh 3A GC-64M 1 mét</h3></a>
+                    <p class="price-old">Giá: 80.000 VNĐ</p>
+                    <p class="price-new">Còn: 50.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/daysac4.webp" alt="Cáp Aukey USB-A to USB-C dây dù 0.9 mét CB-CD30">
+                    <a href="/Daysact3/day4.html"><h3>Cáp Aukey USB-A to USB-C dây dù 0.9 mét CB-CD30</h3></a>
+                    <p class="price-old">Giá: 400.000 VNĐ</p>
+                    <p class="price-new">Còn: 280.000 VNĐ</p>
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                </div>
+            <div>
+        <ul class="pagination" >
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+            </div>
+            </div>
+            </section>
+    </main>
+    <!-- Phần Giới Thiệu -->
+<section id="about">
+    <div class="container">
+        <div class="row">           
+            <!-- Cột Về chúng tôi -->
+            <div class="col-md-3">
+                <div class="about-item">
+                    <h3>Táo Phone</h3>                   
+                     <h5>Địa chỉ: 331 QL1A, P.An Phú Đông, Q.12, TP.Hồ Chí Minh. TP.Biên Hòa, Đồng Nai. Gò Vấp, HCM, TP.Tuy Hòa, Phú Yên. H.Tây Hòa, Phú Yên</h5>
+                     <h5>Hotline: Chi nhánh Online: 0813.000.686</h5>
+                     <h5>Chi nhánh Biên Hòa, Đồng Nai: 086.686.6686</h5>
+                     <h5>Chi nhánh Q.Gò Vấp, HCM: 086.686.8668</h5>
+                     <h5>Chi nhánh TP.Tuy Hòa, Phú Yên: 086.866.678</h5>
+                     <h5>Chi nhánh H.Tây Hòa, Phú Yên: 086.768.7878</h5>
+                </div>
+            </div>
+
+            <!-- Cột Kết nối -->
+            <div class="col-md-3">
+                <div class="about-item">
+                    <h3>Kết nối</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/apple/?locale=vi_VN"><img src="image/logofb.jpg" alt="Facebook" class="social-icon"></a>
+                        <a href="#"><img src="image/logozalo.jpg" alt="Zalo" class="social-icon"></a>
+                        <a href="https://www.instagram.com/apple/"><img src="image/logoig.jpg" alt="Instagram" class="social-icon"></a>
+                        <a href="https://www.youtube.com/apple"><img src="image/logoyoutube.jpg" alt="YouTube" class="social-icon"></a>
+                    </div>
+                    <h5>Tổng đài miễn phí</h5>
+                    <h5>Tư vấn mua hàng (Miễn phí)</h5>
+                    <h5>0902578541</h5>
+                    <hr></hr>
+                    <h5>Hỗ trợ kỹ thuật</h5>
+                    <h5>0902578541</h5>
+                    <hr></hr>
+                    <h5>Góp ý, khiếu nại</h5>
+                    <h5>0902578541</h5>
+                </div>
+            </div>
+
+            <!-- Cột Chính sách -->
+            <div class="col-md-3">
+                <div class="about-item">
+                    <h3>Chính sách</h3>
+                    <a href="ChinhSach/chinhsachbaohanh.html"><h5>Chính sách bảo hành</h5></a>
+                    <a href="ChinhSach/chinhsachbaomat.html"><h5>Chính sách bảo mật</h5></a>
+                    <a href="ChinhSach/chinhsachtragop.html"><h5>Chính sách trả góp</h5></a>
+                    <a href="ChinhSach/chinhsachkhuihopsp.html"><h5>Chính sách khui hộp sản phẩm</h5></a>
+                    <a href="ChinhSach/chinhsachgiaohang.html"><h5>Chính sách giao hàng</h5></a>
+                    <a href="ChinhSach/chinhsachhotro.html"><h5>Quy định về hỗ trợ kỹ thuật & sao lưu dữ liệu</h5></a> 
+                </div>
+            </div>
+
+            <!-- Cột Liên hệ --> 
+            <div class="col-md-3">
+                <div class="about-item contact-info">
+                    <h3>Liên hệ</h3>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Tên:</label>
+                            <input type="text" id="name" class="form-control" placeholder="Nhập tên của bạn">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" class="form-control" placeholder="Nhập email của bạn">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tin nhắn:</label>
+                            <textarea id="message" class="form-control" rows="4" placeholder="Nhập tin nhắn của bạn"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Gửi</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Chân Trang -->
+    <footer>
+        <div class="container">
+            <p>&copy;Bản quyền thuộc về Táo Phone • Cung cấp bởi Táo Phone</p>
+        </div>
+    </footer>
+    <!-- Modal Đăng Nhập -->
+<div id="login-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Đăng Nhập</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Tên Đăng Nhập:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mật Khẩu:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Đăng Nhập</button>
+            <div class="forgot-password">
+                <a href="#">Quên mật khẩu?</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal Đăng Ký -->
+<div id="register-modal" class="modal"> 
+    <div class="modal-content">
+        <span class="close">&times;</span> <!-- nhatminh -->
+        <h2>Đăng Ký</h2>
+        <form>
+            <div class="form-group">
+                <label for="phone">Số Điện Thoại:</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mật Khẩu:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Nhắc Lại Mật Khẩu:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit">Đăng Ký</button>
+        </form>
+    </div>
+</div>
+
+    
+    <script src="scripts.js"></script>
+<a href="#" class="back-to-top">
+        <span class="glyphicon glyphicon-arrow-up"></span>
+</a>
+</body>
+</html>
